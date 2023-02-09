@@ -7,8 +7,8 @@ const previouses = document.querySelectorAll('.lastTime');
 
 daily.addEventListener('click',()=>{
     daily.style.color ='white';
-    weekly.style.color ='hsl(234, 33%, 58%)';
-    monthly.style.color ='hsl(234, 33%, 58%)';
+    weekly.style.color ='';
+    monthly.style.color ='';
     fetch('./data.json')
     .then(response => response.json())
     .then(data=>getDaily(data))
@@ -24,8 +24,8 @@ daily.addEventListener('click',()=>{
 })
 weekly.addEventListener('click',()=>{
     weekly.style.color ="white";
-    daily.style.color ='hsl(234, 33%, 58%)';
-    monthly.style.color ='hsl(234, 33%, 58%)';
+    daily.style.color ='';
+    monthly.style.color ='';
     fetch('./data.json')
     .then(response => response.json())
     .then(data=>getWeekly(data))
@@ -41,8 +41,8 @@ weekly.addEventListener('click',()=>{
 })
 monthly.addEventListener('click',()=>{
     monthly.style.color ="white";
-    weekly.style.color ='hsl(234, 33%, 58%)';
-    daily.style.color ='hsl(234, 33%, 58%)';
+    weekly.style.color ='';
+    daily.style.color ='';
     fetch('./data.json')
     .then(response => response.json())
     .then(data=>getMonthly(data))
